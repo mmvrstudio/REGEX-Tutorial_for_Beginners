@@ -5,11 +5,10 @@
 ## Summary
 
     The regex I will be discribing are Hex values, commonly used for color using the hexadecimal color code format. 
-    In the web we may use hex triplet (hex color code) to represent colors on a web page.
-    For the hex color code there are two formats:
+    Hex triplet / hex color code is meant to represent colors on a web page.
+    For the hex color code there are two formats, and both start with a #:
          1- The standard hex triplet
          2- The shorthand hex format
-    Both formats start with a #.
 
     Example:  /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
 
@@ -46,6 +45,7 @@
 
 
 ### Quantifiers
+
     Code Snippet:  /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
 
     Definition: Quantifiers are used to communicate how many characters are expected, and specify how many instances of a character, group, or character class must be present in the input for a match to be found. 
@@ -56,8 +56,7 @@
         - In our Hex Value regular expression we have 
         * {6} (Hex Triplet Format) and 
         * {3} (Shorthand Hex Format)
-    This indicates that the length of the component preceding these quantifiers should be 6 for {6} and 3 for {3}.
-
+    The length of the component preceding these quantifiers should be 6 for {6} and 3 for {3}.
           ----> Hex Triplet Formats Include: #000000, #FFFFFFF, #0099CC
           ----> Shorthand Hex Format: #000, #FFF, #09C (the hex triplet format would just double each character: #09C -> #0099CC)
 
@@ -68,8 +67,7 @@
 
     Definition: The "or" operator within a regular expression is defined using " | " element. 
     The "or" operator indicates that it could either of the components that we are separating with the " | ". 
-        - For the hex value regular expression: ([a-f0-9]{6}|[a-f0-9]{3}). 
-        - The "or" operator separates these 2 components. 
+        - For the hex value regular expression: ([a-f0-9]{6}|[a-f0-9]{3}), the "or" operator separates these 2 components. 
         - The hex value could either be 6 characters [a-f0-9]{6} or 3 characters [a-f0-9]{3}.
 
 
@@ -78,11 +76,10 @@
 
     Code Snippet:  /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
 
-    Definition: Character classes are components within our regular expression that tells us what type of characters to expect. 
-    In this example character classes are confined within brackets []. 
-    For this example we have 2 character classes: [a-f0-9] and [a-f0-9] which searches for the same values.
+    Definition: Character classes are components within our regular expression that indicate what type of characters to expect. 
+    Character classes are confined within brackets []. 
+    For this example: [a-f0-9] and [a-f0-9] , which searches for the same values.
     -    a-f searches for letters 
-    -    a-f and 
     -    0-9 searches for digits 0-9.
 
 
@@ -94,12 +91,12 @@
     A flag changes the default searching behaviour of a regular expression.
 
     Code Snippet: 
-    i   - The search is case-insensitive: no difference between A and a
-    g   - The search looks for all matches. Without this flag, only the first match is returned
-    m   - Multiline mode (the characters ^ and $ match the beginning and ending of every single line instead of the beginning and ending of the whole string)
-    s   - Enables “Dot All” mode, that allows a dot . to match newline character \n
-    u   - Enables full Unicode support, that enables correct processing of surrogate pairs
-    y   - “Sticky” mode: searching at the exact position in the text from the inex (lastIndex propriety)
+    i   - The search is case-insensitive: no difference between A and a;
+    g   - The search looks for all matches;
+    m   - "Multiline" mode (the characters ^ and $ match the beginning and ending of every single line instead of the beginning and ending of the whole string);
+    s   - Enables “Dot All” mode, that allows a dot . to match newline character \n;
+    u   - Enables full "Unicode" support, that enables correct processing of surrogate pairs;
+    y   - “Sticky” mode: searching at the exact position in the text from the inex (lastIndex propriety).
 
 
 
@@ -125,11 +122,10 @@
 
     Code Snippet: /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
 
-    Definition: A greedy match tries to match an element as many times as possible. 
-    A lazy match tries to match an element as few times as possible. 
-
-     - In the example we find ? which signifies lazy quantifier. 
-     - This is referred to a lazy quantifier because it causes the regular expression engine to match as few occurances as possible. It is possible to turn this lazy match into a greedy one by adding a ?.
+    Definition: A greedy match tries to match an element as many times as possible. A lazy match tries to match an element as few times as possible. 
+    
+     - ? signifies lazy quantifier, because it causes the regular expression engine to match as few occurances as possible. 
+     - It is possible to turn this lazy match into a greedy one by adding a ?.
 
 
 
