@@ -1,19 +1,17 @@
 # REGEX TUTORIAL FOR BEGINNERS 
 
-I will cover the components of a regular expression used to match Hex Values.
+    I will cover the components of a regular expression used to match Hex Values.
 
 ## Summary
 
-The regex I will be discribing are Hex values, commonly used for color using the hexadecimal color code format. 
-In the web we may use hex triplet (hex color code) to represent colors on a web page.
-For the hex color code there are two formats:
-1- The standard hex triplet
-2- The shorthand hex format
-Both formats start with a #.
+    The regex I will be discribing are Hex values, commonly used for color using the hexadecimal color code format. 
+    In the web we may use hex triplet (hex color code) to represent colors on a web page.
+    For the hex color code there are two formats:
+         1- The standard hex triplet
+         2- The shorthand hex format
+    Both formats start with a #.
 
-Example: 
-
- /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
+    Example:  /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
 
 
 
@@ -39,11 +37,11 @@ Example:
 
 ### Anchors
 
-Code Snippet:   /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
+    Code Snippet:   /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
 
-Definition: Anchors are used at the start and end of a string or expression. 
+    Definition: Anchors are used at the start and end of a string or expression. 
 
--  /^ and $/ signify the beginning or end of our expression.
+    -  /^ and $/ signify the beginning or end of our expression.
 
 
 
